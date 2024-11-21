@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-[200px] mx-0 md:mx-[100px] grid grid-rows-2 gap-6 md:grid md:grid-cols-3">
+      <section className="my-[150px] mx-0 md:mx-[100px] grid gap-6 grid-cols-1 md:grid-cols-2">
         <article className="mx-[20px]">
           <h1 className="text-[30px] md:text-[50px] font-bold flex">
             {" "}
@@ -85,8 +85,8 @@ export default function Home() {
             labore earum
           </p>
         </article>
-        <article className="md:col-span-2">
-          <div className="py-[150px] md:px-[100px] relative w-[400px] md:w-[600px]">
+        <article className="mr-52">
+          <div className="py-[100px] md:py-[150px] md:px-[100px] relative w-[400px] md:w-[600px]">
             <Image
               src={sitting}
               alt="Example"
