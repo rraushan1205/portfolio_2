@@ -1,101 +1,211 @@
 import Image from "next/image";
+import pattern1 from "../public/pattern1.png";
+import download from "../public/download.svg";
+import dashProfile from "../public/dashProfile.svg";
+import doodles from "../public/doodles.svg";
+import doodle2 from "../public/doodle2.svg";
+import p1 from "../public/p1.png";
+import p2 from "../public/p2.png";
+import p3 from "../public/p3.png";
+import home from "../public/home.svg";
+import user from "../public/user.svg";
+import phone from "../public/phone.svg";
+import facebook from "../public/facebook.svg";
+import instagram from "../public/instagram.svg";
+import x from "../public/x.svg";
+import stair from "../public/stair.svg";
+import send from "../public/send.svg";
+
+import spiral from "../public/spiral.svg";
+// import doodlebg from "../public/doodlebg.svg";
+
+import sitting from "../public/sitting.svg";
+import bulb from "../public/bulb.svg";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <nav className=" flex justify-between border-b border-col2 px-10 py-[24px] text-[18px] font-semibold">
+        <h1 className="">zolo</h1>
+        <ul className="flex gap-5">
+          <li>Home</li>
+          <li>About Me</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <section className="grid grid-cols-2 px-[50px] py-[50px]">
+        <div className="flex py-[50px] px-[50px]">
+          <Image src={pattern1} alt="Example" className="h-fit py-5" />
+          <div className="mx-5">
+            <div className="text-[60px] font-bold flex">
+              <div>
+                <h1>WEB</h1>
+                <h1 className="text-col3">DESIGNER</h1>
+              </div>
+            </div>
+            <div className="flex gap-5 text-[18px]">
+              <button className="bg-col3 px-5 py-1 rounded-full">
+                Hire me
+              </button>
+              <button className="bg-col2 px-5 py-1 rounded-full flex gap-4">
+                Download Resume
+                <Image src={download} alt="Example" className="" />
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="py-[100px] px-[100px] relative ">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={dashProfile}
+            alt="Example"
+            className="absolute z-10 object-cover left-5 w-[400px]"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src={doodles}
+            alt="Example"
+            className="absolute z-0 bottom-[-50px] w-[400px]"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      <section className="my-[200px] mx-[100px] grid grid-cols-3">
+        <article className="mx-[00px]">
+          <h1 className="text-[50px] font-bold flex">
+            {" "}
+            About <span className="text-col3">me</span>{" "}
+            <Image src={bulb} alt="ss" className="w-20" />
+          </h1>
+          <p className="flex-wrap text-justify text-[20px]">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
+            aliquid laboriosam id, quas ipsum doloribus eum, ut distinctio iusto
+            adipisci cupiditate fuga perferendis at libero esse aliquam eius
+            autem omnis ullam itaque similique culpa repellat! Sed dicta quidem
+            sint odit esse recusandae neque, debitis nulla reprehenderit minima
+            labore earum
+          </p>
+        </article>
+        <article className="col-span-2">
+          <div className="py-[150px] px-[100px] relative w-[600px]">
+            <Image
+              src={sitting}
+              alt="Example"
+              className="absolute z-10 object-cover left-[200px] bottom-[-150px]"
+            />
+            <Image
+              src={doodle2}
+              alt="Example"
+              className="absolute z-0 bottom-[-150px]"
+            />
+          </div>
+        </article>
+      </section>
+      <section
+        className="bg-repeat px-[100px] py-[150px]"
+        style={{ backgroundImage: `url('/doodlebg.svg')` }}
+      >
+        <h1 className="text-[40px] font-bold">
+          My recent <span className="text-col3">works</span>
+        </h1>
+        <div className="flex gap-5">
+          <span className="rounded-full px-6 py-1 bg-col3">All</span>
+          <span className="rounded-full px-6 py-1 bg-col2">UI/UX</span>
+          <span className="rounded-full px-6 py-1 bg-col2">Web Design</span>
+        </div>
+        <div className="flex gap-10 my-10">
+          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+            <Image src={p1} alt="Example" className="" />
+          </div>
+          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+            <Image src={p2} alt="Example" className="" />
+          </div>
+          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+            <Image src={p3} alt="Example" className="" />
+          </div>
+        </div>
+      </section>
+      <section className="grid grid-cols-2 px-20 my-20">
+        <div className="s">
+          <h1 className="text-[50px] font-bold">
+            Got Something to <span className="text-col3">suggest?</span>
+          </h1>
+          <div className="flex">
+            <Image src={spiral} alt="Example" className="rotate-[-10deg]" />
+            <Image src={stair} alt="Example" className="mx-5" />
+          </div>
+        </div>
+        <div className="s">
+          <form action="#" className=" mx-10 px-5">
+            <div className="flex">
+              <div className="flex flex-col mx-2 rounded-sm ">
+                <label htmlFor="name" className="">
+                  Your name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="outline-none bg-col2 rounded-md px-2 py-1 "
+                  placeholder="Name"
+                />
+              </div>
+              <div className="flex flex-col mx-2 rounded-sm ">
+                <label htmlFor="email" className="r">
+                  email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="outline-none bg-col2 rounded-md px-2 py-1 "
+                  placeholder="E-mail"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col my-5 px-2">
+              <label htmlFor="message">Messgae</label>
+              <textarea
+                name="message"
+                id="message"
+                className="bg-col2 resize-none rounded-md outline-none my-2 px-2 py-1 h-[250px]"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="flex px-5 py-1 bg-col3 rounded-full items-center justify-center"
+            >
+              Send message <Image src={send} alt="Example" className="" />
+            </button>
+          </form>
+        </div>
+      </section>
+      <footer className=" flex justify-center py-[0px] items-center flex-col">
+        <ul className="flex gap-20">
+          <li className="flex text-[18px]">
+            <Image src={home} alt="Example" className="h-5 mx-[1px]" /> Home
+          </li>
+
+          <li className="flex text-[18px]">
+            <Image src={user} alt="Example" className="h-5 mx-[1px]" /> About me
+          </li>
+
+          <li className="flex text-[18px]">
+            <Image src={phone} alt="Example" className="h-5 mx-[1px]" /> Contact
+          </li>
+        </ul>
+        <div className="flex gap-5 my-10">
+          <span className="flex rounded-full px-2 py-2 bg-col2">
+            <Image src={facebook} alt="Example" className="" />
+          </span>
+          <span className="flex rounded-full px-2 py-2 bg-col2">
+            <Image src={instagram} alt="Example" className="" />
+          </span>
+          <span className="flex rounded-full px-2 py-2 bg-col2">
+            <Image src={x} alt="Example" className="" />
+          </span>
+        </div>
+        <span className="flex justify-end text-[#EEEEEE]">
+          Terms of Service - Privacy Policy
+        </span>
       </footer>
-    </div>
+    </>
   );
 }
