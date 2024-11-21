@@ -22,15 +22,27 @@ import bulb from "../public/bulb.svg";
 export default function Home() {
   return (
     <>
-      <nav className=" flex justify-between border-b border-col2 px-10 py-[24px] text-[15px] md:text-[18px] font-semibold">
+      <nav
+        id="nav"
+        className=" flex justify-between border-b border-col2 px-10 py-[24px] text-[15px] md:text-[18px] font-semibold"
+      >
         <h1 className="">zolo</h1>
         <ul className="flex gap-5">
-          <li>Home</li>
-          <li>About Me</li>
-          <li>Contact</li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#aboutme">About Me </a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
-      <section className=" flex flex-col md:grid md:grid-cols-2 md:px-[50px] py-[50px]">
+      <section
+        id="home"
+        className=" flex flex-col md:grid md:grid-cols-2 md:px-[50px] py-[50px]"
+      >
         <div className="flex py-[50px] md:px-[50px] pl-5">
           <Image
             src={pattern1}
@@ -48,10 +60,12 @@ export default function Home() {
               <button className="bg-col3 px-5 py-1 rounded-full">
                 Hire me
               </button>
-              <button className="bg-col2 px-5 py-1 rounded-full flex gap-4">
-                Download Resume
-                <Image src={download} alt="Example" className="" />
-              </button>
+              <a href="https://drive.google.com/uc?export=download&id=1qG3EDyxhPkzvSbOHHzaIxnWb-dHzrsIV">
+                <button className="bg-col2 px-5 py-1 rounded-full flex gap-4">
+                  Download Resume
+                  <Image src={download} alt="Example" className="" />
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -69,7 +83,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-[150px] mx-0 md:mx-[100px] grid gap-6 grid-cols-1 md:grid-cols-2">
+      <section
+        id="aboutme"
+        className="my-[150px] mx-0 md:mx-[100px] grid gap-6 grid-cols-1 md:grid-cols-2"
+      >
         <article className="mx-[20px]">
           <h1 className="text-[30px] md:text-[50px] font-bold flex">
             {" "}
@@ -124,7 +141,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col md:grid md:grid-cols-2 px-10 md:px-20 my-20">
+      <section
+        id="contact"
+        className="flex flex-col md:grid md:grid-cols-2 px-10 md:px-20 my-20"
+      >
         <div className="s">
           <h1 className="text-[40px] md:text-[50px] font-bold">
             Got Something to <span className="text-col3">suggest?</span>
