@@ -15,17 +15,14 @@ import instagram from "../public/instagram.svg";
 import x from "../public/x.svg";
 import stair from "../public/stair.svg";
 import send from "../public/send.svg";
-
 import spiral from "../public/spiral.svg";
-// import doodlebg from "../public/doodlebg.svg";
-
 import sitting from "../public/sitting.svg";
 import bulb from "../public/bulb.svg";
 
 export default function Home() {
   return (
     <>
-      <nav className=" flex justify-between border-b border-col2 px-10 py-[24px] text-[18px] font-semibold">
+      <nav className=" flex justify-between border-b border-col2 px-10 py-[24px] text-[15px] md:text-[18px] font-semibold">
         <h1 className="">zolo</h1>
         <ul className="flex gap-5">
           <li>Home</li>
@@ -33,17 +30,21 @@ export default function Home() {
           <li>Contact</li>
         </ul>
       </nav>
-      <section className="grid grid-cols-2 px-[50px] py-[50px]">
-        <div className="flex py-[50px] px-[50px]">
-          <Image src={pattern1} alt="Example" className="h-fit py-5" />
+      <section className=" flex flex-col md:grid md:grid-cols-2 md:px-[50px] py-[50px]">
+        <div className="flex py-[50px] md:px-[50px] pl-5">
+          <Image
+            src={pattern1}
+            alt="Example"
+            className="h-[200px] md:h-fit w-fit py-5"
+          />
           <div className="mx-5">
-            <div className="text-[60px] font-bold flex">
+            <div className="text-[45px] md:text-[60px] font-bold flex">
               <div>
                 <h1>WEB</h1>
                 <h1 className="text-col3">DESIGNER</h1>
               </div>
             </div>
-            <div className="flex gap-5 text-[18px]">
+            <div className="flex gap-5 text-[15px] md:text-[18px] flex-wrap">
               <button className="bg-col3 px-5 py-1 rounded-full">
                 Hire me
               </button>
@@ -54,28 +55,28 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="py-[100px] px-[100px] relative ">
+        <div className="mb-[250px] md:mb-0 md:py-[100px] px-[50px] md:px-[100px] relative ">
           <Image
             src={dashProfile}
             alt="Example"
-            className="absolute z-10 object-cover left-5 w-[400px]"
+            className="absolute z-10 object-cover md:left-5 w-[350px] md:w-[400px]"
           />
           <Image
             src={doodles}
             alt="Example"
-            className="absolute z-0 bottom-[-50px] w-[400px]"
+            className="absolute z-0 md:bottom-[-50px] w-[350px] md:w-[400px]"
           />
         </div>
       </section>
 
-      <section className="my-[200px] mx-[100px] grid grid-cols-3">
-        <article className="mx-[00px]">
-          <h1 className="text-[50px] font-bold flex">
+      <section className="my-[200px] mx-0 md:mx-[100px] grid grid-rows-2 gap-6 md:grid md:grid-cols-3">
+        <article className="mx-[20px]">
+          <h1 className="text-[30px] md:text-[50px] font-bold flex">
             {" "}
-            About <span className="text-col3">me</span>{" "}
-            <Image src={bulb} alt="ss" className="w-20" />
+            About &nbsp; <span className="text-col3">me</span>{" "}
+            <Image src={bulb} alt="ss" className="w-14 md:w-20" />
           </h1>
-          <p className="flex-wrap text-justify text-[20px]">
+          <p className="flex-wrap text-justify text-[17px] md:text-[20px]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
             aliquid laboriosam id, quas ipsum doloribus eum, ut distinctio iusto
             adipisci cupiditate fuga perferendis at libero esse aliquam eius
@@ -84,58 +85,66 @@ export default function Home() {
             labore earum
           </p>
         </article>
-        <article className="col-span-2">
-          <div className="py-[150px] px-[100px] relative w-[600px]">
+        <article className="md:col-span-2">
+          <div className="py-[150px] md:px-[100px] relative w-[400px] md:w-[600px]">
             <Image
               src={sitting}
               alt="Example"
-              className="absolute z-10 object-cover left-[200px] bottom-[-150px]"
+              className="absolute z-10 object-cover w-[300px] md:left-[200px] left-[50px] bottom-[-150px]"
             />
             <Image
               src={doodle2}
               alt="Example"
-              className="absolute z-0 bottom-[-150px]"
+              className="absolute z-0 md:w-[550px] bottom-[-150px]"
             />
           </div>
         </article>
       </section>
       <section
-        className="bg-repeat px-[100px] py-[150px]"
+        className="bg-repeat px-[40px] md:px-[100px] py-[100px] md:py-[150px]"
         style={{ backgroundImage: `url('/doodlebg.svg')` }}
       >
-        <h1 className="text-[40px] font-bold">
+        <h1 className="text-[30px] md:text-[40px] font-bold">
           My recent <span className="text-col3">works</span>
         </h1>
         <div className="flex gap-5">
           <span className="rounded-full px-6 py-1 bg-col3">All</span>
           <span className="rounded-full px-6 py-1 bg-col2">UI/UX</span>
-          <span className="rounded-full px-6 py-1 bg-col2">Web Design</span>
+          <span className="rounded-full px-6 py-1 bg-col2">Web</span>
         </div>
-        <div className="flex gap-10 my-10">
-          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+        <div className="flex gap-5 md:gap-10 my-10">
+          <div className="md:px-10 px-2 py-2 md:py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
             <Image src={p1} alt="Example" className="" />
           </div>
-          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+          <div className="md:px-10 px-2 py-2 md:py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
             <Image src={p2} alt="Example" className="" />
           </div>
-          <div className="px-10 py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+          <div className="md:px-10 px-2 py-2 md:py-10 bg-white rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
             <Image src={p3} alt="Example" className="" />
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-2 px-20 my-20">
+      <section className="flex flex-col md:grid md:grid-cols-2 px-10 md:px-20 my-20">
         <div className="s">
-          <h1 className="text-[50px] font-bold">
+          <h1 className="text-[40px] md:text-[50px] font-bold">
             Got Something to <span className="text-col3">suggest?</span>
           </h1>
           <div className="flex">
-            <Image src={spiral} alt="Example" className="rotate-[-10deg]" />
-            <Image src={stair} alt="Example" className="mx-5" />
+            <Image
+              src={spiral}
+              alt="Example"
+              className="w-[150px] md:rotate-[-10deg]"
+            />
+            <Image
+              src={stair}
+              alt="Example"
+              className="md:mx-5 w-[170px] flex-shrink"
+            />
           </div>
         </div>
         <div className="s">
-          <form action="#" className=" mx-10 px-5">
-            <div className="flex">
+          <form action="#" className=" md:mx-10 px-5">
+            <div className="flex md:flex-row flex-col">
               <div className="flex flex-col mx-2 rounded-sm ">
                 <label htmlFor="name" className="">
                   Your name
@@ -178,7 +187,7 @@ export default function Home() {
         </div>
       </section>
       <footer className=" flex justify-center py-[0px] items-center flex-col">
-        <ul className="flex gap-20">
+        <ul className="flex gap-5 md:gap-20">
           <li className="flex text-[18px]">
             <Image src={home} alt="Example" className="h-5 mx-[1px]" /> Home
           </li>
